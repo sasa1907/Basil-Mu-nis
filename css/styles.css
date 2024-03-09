@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding:0;
+    font-family: cairo ;
+    box-sizing: border-box; 
+    text-decoration: none;
+    direction: rtl;
+}
+
+
+
+/* Base styles */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(19, 18, 18);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header-title,
+h1 a {
+    margin: 25px 10px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+h1 span {
+    color: rgb(224, 172, 15);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar p {
+    margin-right: 15px;
+}
+
+.nav-bar p a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-bar p a:hover {
+    color: #e0ac0f;
+    transition: 0.5s;
+}
+
+.nav-bar p a:focus {
+    color: rgb(224, 172, 15);
+}
+
+.landing-page {
+    background-color: rgb(37, 36, 36);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+.landing-page img {
+    max-width: 550px; /* Adjust image size based on container */
+    border-radius: 50%;
+}
+
+.landing-page .intro {
+    margin-left: 50px;
+}
+
+.landing-page .intro h1 {
+    color: white;
+    font-size: 45px;
+    margin-right: 25px;
+}
+
+.landing-page .intro h1 span {
+    color: rgb(24, 170, 80);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-bar {
+        margin: 15px 0;
+    }
+
+    .header-title {
+        margin-bottom: 5px;
+    }
+
+    .header-title,
+    h1 a {
+        margin: 15px 0;
+    }
+
+    .landing-page {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .landing-page img {
+        margin-bottom: 20px;
+        width: 300px;
+    }
+
+    .landing-page .intro {
+        margin-left: 0;
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 860px) and (min-width: 769px) {
+    .landing-page {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .landing-page .intro {
+        margin: 20px;
+    }
+    
+    .landing-page img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.telawat .main-title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    position: relative; /* Make sure the ::after pseudo-element is positioned relative to this */
+}
+
+.telawat .main-title::after {
+    content: ""; /* Add content for the pseudo-element */
+    position: absolute; /* Position the pseudo-element relative to its parent */
+    bottom: -15px; /* Adjust the distance of the line from the text */
+    left: 50%; /* Position the line at the center */
+    transform: translateX(-50%); /* Adjust to center the line */
+    background-color: black;
+    width: 100px; /* Adjust the width of the line */
+    height: 3px; /* Adjust the height and thickness of the line */
+}
+
+.telawat {
+    padding: 25px;
+    position: relative;
+    background-color: #eee;
+    color: black;
+}
+.telawat .container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 40px;
+}
+.telawat .box {
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.telawat .box:hover {
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.telawat .box img {
+    width: 100%;
+    max-width: 100%;
+}
+.telawat .box .content {
+    padding: 10px 20px 5px;
+}
+.telawat .box .content h3 {
+    margin: 0;
+}
+
+.telawat .box .content h3 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 5px;
+    padding: 0;
+    color: 0000ee;
+}
+
+.telawat .box .content h3 a:hover {
+    color: rgb(222, 169, 9);
+    transition: 0.3s;
+}
+
+.telawat .box .info {
+    padding: 0px;
+    border-top: 1px solid #e6e6e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.telawat .box .info a {
+    color: #a3a3a4;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .telawat .main-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .telawat .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid columns for smaller screens */
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 860px) and (min-width: 769px) {
+    .telawat .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column widths */
+    }
+}
+/* End telawat */
+
+.lessons .main-title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: #eee;
+    position: relative; /* Make sure the ::after pseudo-element is positioned relative to this */
+}
+
+.lessons .main-title::after {
+    content: ""; /* Add content for the pseudo-element */
+    position: absolute; /* Position the pseudo-element relative to its parent */
+    bottom: -15px; /* Adjust the distance of the line from the text */
+    left: 50%; /* Position the line at the center */
+    transform: translateX(-50%); /* Adjust to center the line */
+    background-color: white;
+    width: 100px; /* Adjust the width of the line */
+    height: 3px; /* Adjust the height and thickness of the line */
+}
+
+.lessons {
+    padding: 25px;
+    position: relative;
+    background-color: rgb(37, 36, 36);
+}
+.lessons .container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 40px;
+}
+.lessons .box {
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.lessons .box:hover {
+    box-shadow: 0 2px 15px hsl(0, 0%, 20%);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.lessons .box img {
+    width: 100%;
+    max-width: 100%;
+}
+.lessons .box .content {
+    padding: 10px 20px 5px;
+}
+.lessons .box .content h3 {
+    margin: 0;
+}
+
+.lessons .box .content h3 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 5px;
+    padding: 0;
+}
+
+.lessons .box .content h3 a:hover {
+    color: rgb(222, 169, 9);
+    transition: 0.3s;
+}
+
+.lessons .box .info {
+    padding: 0px;
+    border-top: 1px solid #e6e6e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lessons .box .info a {
+    color: #a3a3a4;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .lessons .container {
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .lessons .container {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .lessons .container {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+    }
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 860px) and (min-width: 769px) {
+    .lessons .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column widths */
+    }
+}
+
+
+.footer .main-title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    position: relative; /* Make sure the ::after pseudo-element is positioned relative to this */
+}
+
+.footer .main-title::after {
+    content: ""; /* Add content for the pseudo-element */
+    position: absolute; /* Position the pseudo-element relative to its parent */
+    bottom: -15px; /* Adjust the distance of the line from the text */
+    left: 50%; /* Position the line at the center */
+    transform: translateX(-50%); /* Adjust to center the line */
+    background-color: black;
+    width: 100px; /* Adjust the width of the line */
+    height: 3px; /* Adjust the height and thickness of the line */
+}
+
+.footer {
+    padding: 25px;
+    position: relative;
+    background-color: #eee;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer img {
+    max-width: 550px; /* Adjust image size based on container */
+    border-radius: 15px;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 30%);
+}
+
+.footer .end {
+    margin-right: 50px;
+}
+
+.footer .container h2 {
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.footer .container p {
+    font-size: 35px;
+    font-weight: 800;
+    color: rgba(144, 12, 12, 0.797);
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .footer .container {
+        display: block;
+        text-align: center;
+    }
+
+    .footer .img img {
+        max-width: 300px;
+    }
+    
+    .footer .main-title {
+        font-size: 28px;
+        margin-top: 5px;
+    }
+    
+    .footer .container h2 {
+        margin-top: 10px;
+    }
+    
+    .footer .container h2,
+    .footer .container p {
+        font-size: 20px;
+    }
+    
+    .footer .container p {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer .container {
+        display: block;
+        text-align: center;
+    }
+
+    .footer .img img {
+        max-width: 300px;
+    }
+
+    .footer .main-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .footer .container h2,
+    .footer .container p {
+        font-size: 18px;
+    }
+    
+    .footer .end {
+        margin-right: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+.fa-eye:before {
+    content: "\f06e";
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+}
